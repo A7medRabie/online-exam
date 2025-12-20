@@ -1,0 +1,53 @@
+  
+
+   
+
+  <div class=" flex flex-1 justify-center items-center  ">
+
+      <div class="w-full   
+                    bg-[#F0F4FC] 
+                    backdrop-blur-[26px] 
+                    border border-white/30
+                    rounded-[32px] 
+                    px-20
+                    py-8 
+                    shadow-[0_0_25px_rgba(0,0,0,0.45)]">
+           
+            <h2 class="text-main text-4xl font-bold mb-4 text-center">
+            {{formtitle}}
+            </h2>
+            <p class="text-primary text-sm mb-4 text-center">{{formsubtitle}}</p>
+        
+           
+           <ng-content select="[inputs]"></ng-content>
+           
+           
+            <div class="text-right  mb-2">
+              <a routerLink="/forget-password" class="text-main text-sm hover:underline cursor-pointer">
+                {{forgetLink}}
+              </a>
+            </div>
+ 
+
+          <!-- OR Divider -->
+            
+          <ng-content select="[divider]"></ng-content>
+
+
+            <!-- Social Icons -->
+
+            <ng-content select="[social]"></ng-content>
+
+
+             <ng-content select="[submit]"></ng-content>
+
+            <p class="text-secondary text-sm mt-5 text-center">
+              {{helpertext}}
+              <a [routerLink]="'/' + helperlink"  class="text-main hover:underline ml-1">
+                {{helperlink}}
+              </a>
+            </p>
+
+      </div>
+  </div>
+ 

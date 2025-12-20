@@ -25,6 +25,13 @@
               }
             ],
             "styles": [
+              
+              "./node_modules/primeicons/primeicons.css"
+             ,
+               "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/ngx-spinner/animations/ball-spin.css",
+
+
               "src/styles.css"
             ],
             "server": "src/main.server.ts",

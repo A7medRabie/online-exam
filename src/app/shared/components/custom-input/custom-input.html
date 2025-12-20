@@ -1,0 +1,21 @@
+ 
+<div class="relative mb-2">
+
+  <!-- Icon -->
+  <i class="{{ icon }} text-secondary absolute left-4 top-1/2 -translate-y-1/2 text-lg"></i>
+  <i (click)="togglePassword()" class=" {{passIcon}} text-secondary absolute right-4 top-1/2 -translate-y-1/2 text-lg cursor-pointer"></i>
+  <!-- Input -->
+  <label (for)="label" class="sr-only">{{label}}</label>
+  <input
+  [value]="value"
+   (input)="handleInput($event)"
+   (blur)="onTouched()"
+     [id]="label"
+    [type]="type"
+     class="w-full  bg-site text-secondary border border-secondary px-10 py-2 rounded-xl
+           focus:border-main focus-visible:outline-none focus:ring-0  "
+    [placeholder]="placeholder"
+  />
+
+    
+</div>

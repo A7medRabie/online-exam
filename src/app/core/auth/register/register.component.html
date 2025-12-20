@@ -1,0 +1,21 @@
+<auth-wrapper>
+ 
+ 
+  <app-form-layout [formGroup]="registerForm"   [formtitle]="'Register'" [helpertext]="'Already have an account ?'" [helperlink]="'login'" [forgetLink]="'Forgot Password?'">
+      <custom-input formControlName="username" [label]="'Username'" [type]="'text'" [placeholder]="'Enter your Username'" [icon]="'pi pi-user'" inputs ></custom-input>
+      <custom-input formControlName="firstName" [label]="'First Name'" [type]="'text'" [placeholder]="'Enter your First Name'" [icon]="'pi pi-user'" inputs ></custom-input>
+       <custom-input formControlName="lastName" [label]="'Last Name'" [type]="'text'" [placeholder]="'Enter your Last Name'" [icon]="'pi pi-user'" inputs ></custom-input>
+       <custom-input formControlName="email" [label]="'Email'" [type]="'email'" [placeholder]="'Enter your Email'" [icon]="'pi pi-envelope'" inputs ></custom-input>
+       <custom-input formControlName="password" [label]="'Password'" [type]="'password'" [placeholder]="'Enter your Password'" [icon]="'pi pi-lock'" [passIcon]="'pi pi-eye'" inputs ></custom-input>
+       <custom-input formControlName="rePassword" [label]="'rePassword'" [type]="'password'" [placeholder]="' rePassword'" [icon]="'pi pi-lock'" [passIcon]="'pi pi-eye'" inputs ></custom-input>
+        <custom-input formControlName="phone" [label]="'Phone'" [type]="'text'" [placeholder]="'Enter your Phone Number'" [icon]="'pi pi-phone'" inputs ></custom-input>
+        <custom-button [disabled]="registerForm.invalid" [isloading]="isloading()" [label]="'Register'"  (onClick)="onSubmit()" submit></custom-button>
+       <app-auth-or-divider divider></app-auth-or-divider>
+       <app-social-buttons social></app-social-buttons>
+  </app-form-layout>
+  
+ 
+
+</auth-wrapper>
+
+ 
