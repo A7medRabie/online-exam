@@ -1,0 +1,38 @@
+ 
+
+
+<auth-wrapper>
+    
+  <app-form-layout   [formtitle]="'OTP CODE'" [formsubtitle]="'Enter Your OTP Check your email'" [helpertext]="'didnt recieve verification code?'" [helperlink]="'Resend Code?'"  >
+  
+        
+  <div class="flex justify-center gap-4 my-6" inputs>
+     <p-inputotp   [(ngModel)]="value" [length]="6" >
+
+      <ng-template #input let-token let-events="events">
+        <input
+           type="text"
+          [attr.value]="token"
+          maxlength="1"
+          (input)="events.input($event)"
+          (keydown)="events.keydown($event)"
+
+          class="w-14 h-14 text-center text-2xl font-bold
+                bg-primary backdrop-blur-xl
+                border border-white
+                rounded-2xl
+                text-main
+                focus:outline-none
+                focus:border-main
+                focus:ring-2 focus:ring-main
+                focus:shadow-[0_0_12px_rgba(251,146,60,0.6)]
+                transition-all duration-200"
+        />
+      </ng-template>
+    </p-inputotp>
+  </div>
+
+    <custom-button [label]="'Verify'" [disabled]="value.length !== 6" (onClick)="OnSubmit()" [isloading]="isloading()"  submit></custom-button>
+       
+  </app-form-layout>
+</auth-wrapper>

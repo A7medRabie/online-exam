@@ -1,3 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+:root {
+  /* Light Mode */
+  --color-main:#4461F2;
+  --color-primary:#F0F4FC;
+  --color-secondary: #989a9d;
+  --color-hover:#ff0000
+  --color-disabled: #D3D3D3;
+  
+ }
+
+.dark {
+  /* Dark Mode */
+ --color-site:#242424;
+     --color-secondary: #ff4100;
+    --color-x:#ff6a00;
+    --color-disabled: #D3D3D3;
+
+ 
+}
+
+@theme {
+  --color-main: var(--color-main);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-hover: var(--color-hover);
+  --color-disabled: var(--color-disabled);  
+}
