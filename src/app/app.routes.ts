@@ -1,12 +1,11 @@
 import { Routes } from '@angular/router';
-import { AuthLayoutComponent } from './core/auth/layouts/auth-layout/auth-layout.component';
-import { LoginComponent } from './core/auth/login/login.component';
-import { RegisterComponent } from './core/auth/register/register.component';
-import { OtpComponent } from './core/auth/otp/otp.component';
-import { ForgetPasswordComponent } from './core/auth/forget-password/forget-password.component';
-import { NewPasswordComponent } from './core/auth/new-password/new-password.component';
-import { MainLayoutComponent } from './core/auth/layouts/main-layout/main-layout.component';
- 
+import { AuthLayoutComponent } from './core/auth-layout/auth-layout.component';
+import { LoginComponent } from './features/auth/pages/login/login.component';
+import { RegisterComponent } from './features/auth/pages/register/register.component';
+import { OtpComponent } from './features/auth/pages/otp/otp.component';
+import { ForgetPasswordComponent } from './features/auth/pages/forget-password/forget-password.component';
+import { NewPasswordComponent } from './features/auth/pages/new-password/new-password.component';
+  
 export const routes: Routes =
  [
    //  {path: '', redirectTo: 'home', pathMatch: 'full' },

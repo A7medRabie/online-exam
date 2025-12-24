@@ -1,15 +1,15 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { AuthWrapper } from "../../../shared/components/auth-wrapper/auth-wrapper";
-import { FormLayoutComponent } from "../../../shared/components/form-layout/form-layout.component";
-import { CustomInput } from "../../../shared/components/custom-input/custom-input";
-import { CustomButton } from "../../../shared/components/custom-button/custom-button";
-import { SocialButtonsComponent } from "../../../shared/components/social-buttons/social-buttons.component";
-import { AuthOrDividerComponent } from "../../../shared/components/auth-or-divider/auth-or-divider.component";
+import { AuthWrapper } from "../../components/auth-wrapper/auth-wrapper";
+import { FormLayoutComponent } from "../../components/form-layout/form-layout.component";
+import { CustomInput } from "../../../../shared/components/custom-input/custom-input";
+import { CustomButton } from "../../../../shared/components/custom-button/custom-button";
+import { SocialButtonsComponent } from "../../components/social-buttons/social-buttons.component";
+import { AuthOrDividerComponent } from "../../components/auth-or-divider/auth-or-divider.component";
 import { FormGroup, FormBuilder, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule } from '@angular/forms';
  import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
-import { ToastService } from '../../services/toast.service';
+import { AuthService } from '../../../../core/services/auth.service';
+import { ToastService } from '../../../../core/services/toast.service';
 import { sign } from 'crypto';
 import { finalize } from 'rxjs';
  @Component({

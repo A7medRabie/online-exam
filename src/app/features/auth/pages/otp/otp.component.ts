@@ -1,14 +1,14 @@
 import { Component, DestroyRef, inject, OnInit, output, Output, signal } from '@angular/core';
-import { AuthWrapper } from "../../../shared/components/auth-wrapper/auth-wrapper";
-import { FormLayoutComponent } from "../../../shared/components/form-layout/form-layout.component";
+import { AuthWrapper } from "../../components/auth-wrapper/auth-wrapper";
+import { FormLayoutComponent } from "../../components/form-layout/form-layout.component";
 import { InputOtpModule } from 'primeng/inputotp';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CustomButton } from "../../../shared/components/custom-button/custom-button";
+import { CustomButton } from "../../../../shared/components/custom-button/custom-button";
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
  import { Router } from '@angular/router';
-import { verifyOtp } from '../../interfaces/password.interface';
-import { AuthService } from '../../services/auth.service';
-import { ToastService } from '../../services/toast.service';
+import { verifyOtp } from '../../../../core/interfaces/password.interface';
+import { AuthService } from '../../../../core/services/auth.service';
+import { ToastService } from '../../../../core/services/toast.service';
 import { sign } from 'crypto';
 import { finalize } from 'rxjs';
    
